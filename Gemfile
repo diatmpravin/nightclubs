@@ -34,6 +34,9 @@ gem 'haml'
 gem 'haml-rails', :group => :development
 gem 'simple_form'
 
+#AUTHENTICATION GEM
+gem 'devise'
+
 #TESTING GEMS
 group :test do
   gem 'database_cleaner'
@@ -42,6 +45,7 @@ group :test do
   gem 'factory_girl_rails'
   gem 'cucumber-rails'
   gem 'capybara'
+  gem 'mongoid-rspec'
 end
 
 # To use ActiveModel has_secure_password
