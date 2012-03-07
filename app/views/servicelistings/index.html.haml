@@ -1,0 +1,21 @@
+%h1 Listing servicelistings
+
+%table
+  %tr
+    %th Name
+    %th Description
+    %th
+    %th
+    %th
+
+  - @servicelistings.each do |servicelisting|
+    %tr
+      %td= servicelisting.name
+      %td= servicelisting.description
+      %td= link_to 'Show', servicelisting
+      %td= link_to 'Edit', edit_servicelisting_path(servicelisting)
+      %td= link_to 'Destroy', servicelisting, :confirm => 'Are you sure?', :method => :delete
+
+%br
+
+= link_to 'New Servicelisting', new_servicelisting_path
