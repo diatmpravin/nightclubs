@@ -1,0 +1,7 @@
+%h1 Editing servicelisting
+
+= render 'form'
+
+= link_to 'Show', @servicelisting
+\|
+= link_to 'Back', servicelistings_path

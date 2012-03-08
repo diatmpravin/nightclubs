@@ -52,8 +52,24 @@ module Nightclubs
 
     # Enable the asset pipeline
     config.assets.enabled = true
+    
+    #forcing your application to not access the DB or load models when precompiling your assets.
+    config.assets.initialize_on_precompile = false
 
     # Version of your assets, change this if you want to expire all your assets
     config.assets.version = '1.0'
+    
+    #Configure generators to use the gems we want, and skip view spec generation
+    config.generators do |g|
+  		g.test_framework :rspec, :views => false, :fixture => true
+  		g.fixture_replacement :factory_girl, :dir => 'spec/factories'
+  		g.form_builder :simple_form
+  		g.template_engine :haml
+	end
+	
+	#turn on autoloading of lib directory and all its subdirectories
+	config.autoload_paths += %W(#{config.root}/lib)
+	config.autoload_paths += Dir["#{config.root}/lib/**/"]
+    
   end
 end
