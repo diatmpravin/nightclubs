@@ -1,6 +1,6 @@
 
 %h3 Home
-	- @users.each do |user|
-		%p
-  			%b Name:
-  			= user.name
+- @users.each do |user|
+	%p
+		%b Name:
+		= link_to user.name, user
