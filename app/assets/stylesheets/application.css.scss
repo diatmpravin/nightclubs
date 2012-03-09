@@ -60,6 +60,7 @@ body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,
 	height: 18px;
 	margin-right: 3px;
 	padding: 12px 20px 0px 20px;
+	background: url("img06.jpg") no-repeat right 10px;
 	text-decoration: none;
 	font-family: Arial, Helvetica, sans-serif;
 	font-size: 14px;
@@ -81,6 +82,13 @@ body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,
 	padding: 12px 20px 12px 20px;
 }
 
+#container {
+
+  	margin: 0 auto;  	
+  	padding: 20px 40px;  
+  	min-height: 100%;  
+  	position: relative;  
+}
 
 #footer {
 	background: repeat scroll 0 0 transparent;

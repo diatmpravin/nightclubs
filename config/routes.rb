@@ -1,10 +1,9 @@
 Nightclubs::Application.routes.draw do
+  resources :bars
+
   	root :to => "home#index"
-
   	devise_for :users
-
-  	#resources :servicelistings
-
+  	resources :servicelistings
   	resources :users, :only => :show
 
   # The priority is based upon order of creation:
