@@ -1,4 +1,6 @@
 Nightclubs::Application.routes.draw do
+  resources :servicelistings
+
   resources :bars
 
   	root :to => "home#index"

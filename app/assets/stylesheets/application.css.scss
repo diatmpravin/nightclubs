@@ -97,7 +97,7 @@ body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,
     min-height: 70px;
 	width: 100%;
     opacity: 0.9;	
-    position: absolute;
+    position: relative;
 	bottom: 0;
 }
 
@@ -161,4 +161,31 @@ body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,
 #flash_alert {
   background-color: #FCC;
   border: solid 1px #C66;
+}
+
+#textFieldEffect{
+    background: none repeat scroll 0 0 #CFCFCF;
+    border-color: #A5A5A5;
+    border-style: solid;
+    border-width: 1px;
+    color: #C6C6C6;
+    font-family: Arial;
+    font-size: 15px;
+    height: 25px;
+    width: 470px;
+    background: #F4F4F4;
+}
+
+#textLabel{
+	color: #C6C6C6;
+    font-family: Arial;
+    font-size: 14px;
+	font-weight:bold;
+	border-bottom: 1px solid #BEBEBE;
+}
+
+#textcolor {
+    color: #D59113;
+    font-size: 18px;
+    margin-bottom: 25px;
 }

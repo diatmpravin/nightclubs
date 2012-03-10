@@ -1,3 +1,40 @@
 // Place all the styles related to the bars controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+#registration{
+	margin-left: 10%;
+    margin-top: 1%;
+	border:7px solid #DDDDDD;
+	width:940px;
+	height:375px;
+}
+
+#regdetails{
+	width:640px;
+	height:370px;
+	float:left;
+	left:150px;
+	top:20px;
+	position:relative;
+}
+
+.register {
+    background: none repeat scroll 0 0 #D59113;
+    color: #FFFFFF;
+    float: right;
+    font-size: 14px;
+    height: 25px;
+    margin-top: 10px;
+    width: 120px;
+}
+
+table{
+	width:100%;
+	border-collapse:collapse;
+}
+
+td{
+	height:40px;
+	width:30%;
+}

@@ -1,18 +1,35 @@
 = simple_form_for @bar do |form|
 
-  -if @bar.errors.any?
-    #errorExplanation
-      %h2= "#{pluralize(@bar.errors.count, "error")} prohibited this #{Bar.name.titleize} from being saved:"
-      %ul
-        - @bar.errors.full_messages.each do |msg|
-          %li= msg  
+	-if @bar.errors.any?
+		#errorExplanation
+			%h2= "#{pluralize(@bar.errors.count, "error")} prohibited this #{Bar.name.titleize} from being saved:"
+			%ul
+				- @bar.errors.full_messages.each do |msg|
+					%li= msg  
+	%table
+		%tr
+			%td{ :id => 'textLabel'} Bar Name 
+			%td{ :id => 'textLabel'}= form.text_field :name, :id => 'textFieldEffect'
+			
+		%tr
+			%td{ :id => 'textLabel'} Person of contact
+			%td{ :id => 'textLabel'}= form.text_field :owner, :id => 'textFieldEffect'
+			
+		%tr
+			%td{ :id => 'textLabel'} Phone
+			%td{ :id => 'textLabel'}= form.text_field :phone, :id => 'textFieldEffect'
+			
+		%tr
+			%td{ :id => 'textLabel'} City
+			%td{ :id => 'textLabel'}= form.text_field :city, :id => 'textFieldEffect'
 
-  = form.input :name, :label => 'Name'
-  = form.input :owner, :label => 'Owner'
-  = form.input :phone, :label => 'Phone'
-  = form.input :city, :label => 'City'
-  = form.input :website, :label => 'Website'
-  = form.input :location, :label => 'Location'
+		%tr
+			%td{ :id => 'textLabel'} Website
+			%td{ :id => 'textLabel'}= form.text_field :website, :id => 'textFieldEffect'
+			
+		%tr
+			%td{ :id => 'textLabel'} Address
+			%td{ :id => 'textLabel'}= form.text_field :location, :id => 'textFieldEffect'
 
-  .actions
-    = form.button :submit
+	.actions
+		= form.button :submit, :value => "REGISTER", :class => "register"

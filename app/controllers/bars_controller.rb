@@ -1,4 +1,6 @@
 class BarsController < ApplicationController
+
+	before_filter :authenticate_user!
   
 	def index
 		@bars = Bar.all
@@ -17,17 +19,18 @@ class BarsController < ApplicationController
 	end
 
 	def create
-		@bar = Bar.new(params[:bar])
-
-		respond_to do |format|
-			if @bar.save
-				format.html { redirect_to @bar, notice: 'Bar was successfully created.' }
-				format.json { render json: @bar, status: :created, location: @bar }
-			else
-				format.html { render action: "new" }
-				format.json { render json: @bar.errors, status: :unprocessable_entity }
-			end
-		end
+		#@bar = Bar.new(params[:bar])
+		@bar = current_user.bars.create(params[:bar])
+		redirect_to @bar, notice: 'Bar was successfully created.'
+		#respond_to do |format|
+		#	if @bar.save
+		#		format.html { redirect_to @bar, notice: 'Bar was successfully created.' }
+		#		format.json { render json: @bar, status: :created, location: @bar }
+		#	else
+		#		format.html { render action: "new" }
+		#		format.json { render json: @bar.errors, status: :unprocessable_entity }
+		#	end
+		#end
 	end
 
 	def update

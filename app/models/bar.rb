@@ -3,8 +3,11 @@ class Bar
   include Mongoid::Timestamps::Created
   include Mongoid::Timestamps::Updated
   
-  #relations
+  #RELATIONS
   belongs_to :user
+  has_many :servicelistings
+  
+  #FIELDS
   field :name, :type => String
   field :owner, :type => String
   field :phone, :type => String

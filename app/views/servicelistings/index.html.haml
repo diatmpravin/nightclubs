@@ -2,16 +2,28 @@
 
 %table
   %tr
-    %th Name
+    %th Title
     %th Description
+    %th Availability
+    %th Buypirce
+    %th Minbidprice
+    %th Noofguest
+    %th Status
+    %th Hightestbid
     %th
     %th
     %th
 
   - @servicelistings.each do |servicelisting|
     %tr
-      %td= servicelisting.name
+      %td= servicelisting.title
       %td= servicelisting.description
+      %td= servicelisting.availability
+      %td= servicelisting.buyPirce
+      %td= servicelisting.minBidPrice
+      %td= servicelisting.noOfGuest
+      %td= servicelisting.status
+      %td= servicelisting.hightestBid
       %td= link_to 'Show', servicelisting
       %td= link_to 'Edit', edit_servicelisting_path(servicelisting)
       %td= link_to 'Destroy', servicelisting, :confirm => 'Are you sure?', :method => :delete

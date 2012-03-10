@@ -1,10 +1,29 @@
+%p#notice= notice
 
 %p
-  %b Name:
-  = @servicelisting.name
+  %b Title:
+  = @servicelisting.title
 %p
   %b Description:
   = @servicelisting.description
+%p
+  %b Availability:
+  = @servicelisting.availability
+%p
+  %b Buypirce:
+  = @servicelisting.buyPirce
+%p
+  %b Minbidprice:
+  = @servicelisting.minBidPrice
+%p
+  %b Noofguest:
+  = @servicelisting.noOfGuest
+%p
+  %b Status:
+  = @servicelisting.status
+%p
+  %b Hightestbid:
+  = @servicelisting.hightestBid
 
 = link_to 'Edit', edit_servicelisting_path(@servicelisting)
 \|

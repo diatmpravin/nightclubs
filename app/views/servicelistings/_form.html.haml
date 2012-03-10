@@ -1,14 +1,43 @@
 = simple_form_for @servicelisting do |form|
 
-  -if @servicelisting.errors.any?
-    #errorExplanation
-      %h2= "#{pluralize(@servicelisting.errors.count, "error")} prohibited this #{Servicelisting.name.titleize} from being saved:"
-      %ul
-        - @servicelisting.errors.full_messages.each do |msg|
-          %li= msg  
+	-if @servicelisting.errors.any?
+		#errorExplanation
+			%h2= "#{pluralize(@servicelisting.errors.count, "error")} prohibited this #{Servicelisting.name.titleize} from being saved:"
+			%ul
+				- @servicelisting.errors.full_messages.each do |msg|
+					%li= msg
 
-  = form.input :name, :label => 'Name'
-  = form.input :description, :label => 'Description'
+	%table
+		%tr
+			%td{:colspan => 4, :id => 'textLabel'}= form.text_field :title, :id => 'sTextFieldEffect'
 
-  .actions
-    = form.button :submit
+		%tr
+			%td{ :id => 'textLabel'} Description
+			%td{ :id => 'textLabel'}= form.text_area :description, :id => 'textFieldEffect'
+
+		%tr
+			%td{ :id => 'textLabel'} Availability 
+			%td{ :id => 'textLabel'}= form.text_field :availability, :id => 'textFieldEffect'
+
+		%tr
+			%td{ :id => 'textLabel'} Buy Pirce 
+			%td{ :id => 'textLabel'}= form.text_field :buyPirce, :id => 'textFieldEffect'
+
+		%tr
+			%td{ :id => 'textLabel'} Min Bid Price
+			%td{ :id => 'textLabel'}= form.text_field :minBidPrice, :id => 'textFieldEffect'
+
+		%tr
+			%td{ :id => 'textLabel'} No Of Guest Allowed 
+			%td{ :id => 'textLabel'}= form.text_field :noOfGuest, :id => 'textFieldEffect'
+
+		%tr
+			%td{ :id => 'textLabel'} Status
+			%td{ :id => 'textLabel'}= form.text_field :status, :id => 'textFieldEffect'
+
+		%tr
+			%td{ :id => 'textLabel'} Hightest Bid 
+			%td{ :id => 'textLabel'}= form.text_field :hightestBid, :id => 'textFieldEffect'		
+
+	.actions
+		= form.button :submit, :value => "POST SERVICE", :class => "sRegister"
