@@ -48,7 +48,7 @@
 :javascript
 $(document).ready(function() {
 	$("#servicelisting_availability").click(function(){
-		$("#servicelisting_availability").datepicker();
+		$("#servicelisting_availability").datetimepicker();
 	});	
 });
 
