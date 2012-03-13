@@ -9,35 +9,35 @@
 
 	%table
 		%tr
-			%td{:colspan => 4, :id => 'textLabel'}= form.text_field :title, :id => 'sTextFieldEffect'
+			%td{:colspan => 4, :id => 'textLabel'}= form.text_field :title, :class => 'sTextFieldEffect'
 
 		%tr
 			%td{ :id => 'textLabel'} Description
-			%td{ :id => 'textLabel'}= form.text_area :description, :id => 'textFieldEffect'
+			%td{ :id => 'textLabel'}= form.text_area :description, :class => 'sTextAreaEffect'
 
 		%tr
 			%td{ :id => 'textLabel'} Availability 
-			%td{ :id => 'textLabel'}= form.text_field :availability, :id => 'textFieldEffect'
+			%td{ :id => 'textLabel'}= form.text_field :availability, :class => 'textFieldEffect', :id => 'datepicker'
 
 		%tr
 			%td{ :id => 'textLabel'} Buy Pirce 
-			%td{ :id => 'textLabel'}= form.text_field :buyPirce, :id => 'textFieldEffect'
+			%td{ :id => 'textLabel'}= form.text_field :buyPirce, :class => 'textFieldEffect'
 
 		%tr
 			%td{ :id => 'textLabel'} Min Bid Price
-			%td{ :id => 'textLabel'}= form.text_field :minBidPrice, :id => 'textFieldEffect'
+			%td{ :id => 'textLabel'}= form.text_field :minBidPrice, :class => 'textFieldEffect'
 
 		%tr
 			%td{ :id => 'textLabel'} No Of Guest Allowed 
-			%td{ :id => 'textLabel'}= form.text_field :noOfGuest, :id => 'textFieldEffect'
+			%td{ :id => 'textLabel'}= form.text_field :noOfGuest, :class => 'textFieldEffect'
 
 		%tr
 			%td{ :id => 'textLabel'} Status
-			%td{ :id => 'textLabel'}= form.text_field :status, :id => 'textFieldEffect'
+			%td{ :id => 'textLabel'}= form.text_field :status, :class => 'textFieldEffect'
 
 		%tr
 			%td{ :id => 'textLabel'} Hightest Bid 
-			%td{ :id => 'textLabel'}= form.text_field :hightestBid, :id => 'textFieldEffect'		
+			%td{ :id => 'textLabel'}= form.text_field :hightestBid, :class => 'textFieldEffect'		
 
 	.actions
 		= form.button :submit, :value => "POST SERVICE", :class => "sRegister"

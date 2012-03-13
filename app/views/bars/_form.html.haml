@@ -9,27 +9,27 @@
 	%table
 		%tr
 			%td{ :id => 'textLabel'} Bar Name 
-			%td{ :id => 'textLabel'}= form.text_field :name, :id => 'textFieldEffect'
+			%td{ :id => 'textLabel'}= form.text_field :name, :class => 'textFieldEffect'
 			
 		%tr
 			%td{ :id => 'textLabel'} Person of contact
-			%td{ :id => 'textLabel'}= form.text_field :owner, :id => 'textFieldEffect'
+			%td{ :id => 'textLabel'}= form.text_field :owner, :class => 'textFieldEffect'
 			
 		%tr
 			%td{ :id => 'textLabel'} Phone
-			%td{ :id => 'textLabel'}= form.text_field :phone, :id => 'textFieldEffect'
+			%td{ :id => 'textLabel'}= form.text_field :phone, :class => 'textFieldEffect'
 			
 		%tr
 			%td{ :id => 'textLabel'} City
-			%td{ :id => 'textLabel'}= form.text_field :city, :id => 'textFieldEffect'
+			%td{ :id => 'textLabel'}= form.text_field :city, :class => 'textFieldEffect'
 
 		%tr
 			%td{ :id => 'textLabel'} Website
-			%td{ :id => 'textLabel'}= form.text_field :website, :id => 'textFieldEffect'
+			%td{ :id => 'textLabel'}= form.text_field :website, :class => 'textFieldEffect'
 			
 		%tr
 			%td{ :id => 'textLabel'} Address
-			%td{ :id => 'textLabel'}= form.text_field :location, :id => 'textFieldEffect'
+			%td{ :id => 'textLabel'}= form.text_field :location, :class => 'textFieldEffect'
 
 	.actions
 		= form.button :submit, :value => "REGISTER", :class => "register"
