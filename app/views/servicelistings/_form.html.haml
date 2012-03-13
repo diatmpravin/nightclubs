@@ -30,15 +30,11 @@
 
 		%tr
 			%td{ :id => 'textLabel'} No Of Guest Allowed 
-			%td{ :id => 'textLabel'}= form.text_field :noOfGuest, :class => 'textFieldEffect'
+			%td{ :id => 'textLabel'}= form.select :noOfGuest, options_for_select([[1, 1], [2, 2],[3, 3], [4, 4],[5, 5], [6, 6]])		
 
 		%tr
 			%td{ :id => 'textLabel'} Status
-			%td{ :id => 'textLabel'}= form.text_field :status, :class => 'textFieldEffect'
-
-		%tr
-			%td{ :id => 'textLabel'} Hightest Bid 
-			%td{ :id => 'textLabel'}= form.text_field :hightestBid, :class => 'textFieldEffect'		
+			%td{ :id => 'textLabel'}= form.text_field :status, :class => 'textFieldEffect'	
 
 	.actions
 		= form.button :submit, :value => "POST SERVICE", :class => "sRegister"
