@@ -20,7 +20,7 @@ class BarsController < ApplicationController
 
 	def create
 		#@bar = Bar.new(params[:bar])
-		@bar = current_user.bars.create!(params[:bar])
+		raise @bar = current_user.bars.create!(params[:bar]).inspect
 		redirect_to @bar, notice: 'Bar was successfully created.'
 		#respond_to do |format|
 		#	if @bar.save

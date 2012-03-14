@@ -1,12 +1,5 @@
 
-= simple_form_for @servicelisting do |form|
-
-	-if @servicelisting.errors.any?
-		#errorExplanation
-			%h2= "#{pluralize(@servicelisting.errors.count, "error")} prohibited this #{Servicelisting.name.titleize} from being saved:"
-			%ul
-				- @servicelisting.errors.full_messages.each do |msg|
-					%li= msg
+= form_for @servicelisting, :validate => true do |form|
 
 	%table
 		%tr
@@ -30,11 +23,16 @@
 
 		%tr
 			%td{ :id => 'textLabel'} No Of Guest Allowed 
-			%td{ :id => 'textLabel'}= form.select :noOfGuest, :class => 'textFieldEffect', options_for_select([[1, 1], [2, 2],[3, 3], [4, 4],[5, 5], [6, 6]])		
+			%td{ :id => 'textLabel'}= form.select :noOfGuest, options_for_select([[1, 1], [2, 2],[3, 3], [4, 4],[5, 5], [6, 6]])		
 
 		%tr
 			%td{ :id => 'textLabel'} Status
-			%td{ :id => 'textLabel'}= form.text_field :status, :class => 'textFieldEffect'	
+			%td{ :id => 'textLabel'}
+				= form.radio_button :status, "active", :checked => 'checked' 
+				= form.label "Active"
+				= form.radio_button :status, "inactive"
+				= form.label "Inactive"	
+					
 
 	.actions
 		= form.button :submit, :value => "POST SERVICE", :class => "sRegister"
@@ -44,7 +42,9 @@
 :javascript
 $(document).ready(function() {
 	$("#servicelisting_availability").click(function(){
-		$("#servicelisting_availability").datepicker();
+		$("#servicelisting_availability").datepicker({
+				dateFormat: 'dd-mm-yy'
+		});
 	});	
 });
 

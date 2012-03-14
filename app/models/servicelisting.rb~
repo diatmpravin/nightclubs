@@ -16,4 +16,11 @@ class Servicelisting
 	field :noOfGuest, :type => Integer
 	field :status, :type => Integer
 	field :hightestBid, :type => Integer
+	
+	#VALIDATIONS
+	validates_presence_of :title, :message => 'Please provide title to your service'
+   validates_presence_of :description, :message => 'Please introduce brief discription of service'
+	validates_presence_of :buyPirce, :message => 'Please provide title to your service'
+	validates_presence_of :minBidPrice, :message => 'Please provide title to your service'
+	validates_presence_of :description, :message => 'Please provide title to your service'
 end

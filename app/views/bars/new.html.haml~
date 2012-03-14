@@ -1,0 +1,5 @@
+#registration
+	#regdetails
+		#textcolor REGISTER YOUR BAR TO NIGHTCLUBS!
+		
+		= render 'form'
