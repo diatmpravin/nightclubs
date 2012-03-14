@@ -34,7 +34,12 @@
 
 		%tr
 			%td{ :id => 'textLabel'} Status
-			%td{ :id => 'textLabel'}= form.text_field :status, :class => 'textFieldEffect'	
+			%td{ :id => 'textLabel'}
+				= form.radio_button :status, "active", :checked => 'checked' 
+				= form.label "Active"
+				= form.radio_button :status, "inactive"
+				= form.label "Inactive"	
+					
 
 	.actions
 		= form.button :submit, :value => "POST SERVICE", :class => "sRegister"

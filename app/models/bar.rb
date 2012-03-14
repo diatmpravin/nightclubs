@@ -7,6 +7,9 @@ class Bar
   belongs_to :user
   has_many :servicelistings
   
+  #VALIDATIONS
+  validates_presence_of :name
+  
   #FIELDS
   field :name, :type => String
   field :owner, :type => String
