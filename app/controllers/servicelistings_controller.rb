@@ -20,7 +20,7 @@ class ServicelistingsController < ApplicationController
 	end
 
 	def create
-		@servicelisting = Servicelisting.new(params[:servicelisting])
+	   @servicelisting = Servicelisting.new(params[:servicelisting])
 
 		respond_to do |format|
 			if @servicelisting.save

@@ -1,5 +1,5 @@
 
-= form_for @servicelisting, :validate => true do |form|
+= form_for @servicelisting, :html => { :multipart => true }, :validate => true do |form|
 
 	%table
 		%tr
@@ -32,7 +32,10 @@
 				= form.label "Active"
 				= form.radio_button :status, "inactive"
 				= form.label "Inactive"	
-					
+		
+		%tr
+			%td{ :id => 'textLabel'} Image
+			%td{ :id => 'textLabel'}= form.file_field :image, :class => 'textFieldEffect'
 
 	.actions
 		= form.button :submit, :value => "POST SERVICE", :class => "sRegister"

@@ -9,9 +9,11 @@ class Servicelisting
                     #:styles => {:thumb => "150x150!"},
                     #:default_url => '/images/servicelisting-noimage.jpg'
                     
-   has_mongoid_attached_file :avatar
+   has_mongoid_attached_file :image,
+                    :styles => {:thumb => "150x150!"},
+                    :default_url => '/images/servicelisting-noimage.jpg'
    
-   attr_accessible :avatar, :title, :description, :availability, :buyPirce, :minBidPrice, :noOfGuest, :status, :hightestBid
+   attr_accessible :image, :title, :description, :availability, :buyPirce, :minBidPrice, :noOfGuest, :status, :hightestBid
                     
   
 	# RELATIONS
@@ -27,10 +29,6 @@ class Servicelisting
 	field :noOfGuest, :type => Integer
 	field :status, :type => Integer
 	field :hightestBid, :type => Integer
-	field :avatar
-	#field :photo_file_name, :string # Original filename
-	#field :photo_content_type, :string # Mime type
-	#field :photo_file_size, :integer # File size in bytes
 	
 	#VALIDATIONS
 	validates_presence_of :title, :message => 'Please provide title to your service'

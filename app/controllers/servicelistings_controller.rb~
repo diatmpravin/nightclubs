@@ -20,7 +20,7 @@ class ServicelistingsController < ApplicationController
 	end
 
 	def create
-		raise @servicelisting = Servicelisting.new(params[:servicelisting]).inspect
+	   raise @servicelisting = Servicelisting.new(params[:servicelisting]).inspect
 
 		respond_to do |format|
 			if @servicelisting.save

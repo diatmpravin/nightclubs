@@ -23,7 +23,7 @@
   = @servicelisting.status
 %p
   %b Avatar:
-  = image_tag @servicelisting.avatar.url
+  = image_tag @servicelisting.image.url, :size => "110x110"
 
 = link_to 'Edit', edit_servicelisting_path(@servicelisting)
 \|
