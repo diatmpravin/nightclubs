@@ -15,7 +15,7 @@ group :assets do
   gem 'sass-rails',   '~> 3.2.3'
   gem 'coffee-rails', '~> 3.2.1'
   # See https://github.com/sstephenson/execjs#readme for more supported runtimes
-  gem 'therubyracer'
+  #gem 'therubyracer'
   gem 'execjs'
   gem 'uglifier', '>= 1.0.3'
 end
@@ -37,16 +37,20 @@ gem 'simple_form'
 #AUTHENTICATION GEM
 gem 'devise'
 
+#FILE UPLOAD
+gem "mongoid-paperclip", :require => "mongoid_paperclip"
+gem "aws-s3",            :require => "aws/s3"
+
 #CLIENT SIDE VALIDATIONS
 gem "client_side_validations", "~> 3.2.0.beta.1"
 gem 'client_side_validations-mongoid'
 
 #TESTING GEMS
-group :test do
+group :development, :test do
   gem 'database_cleaner'
   gem 'rails3-generators' #mainly for factory_girl & simple_form at this point
   gem 'rspec-rails'
-  gem 'factory_girl_rails'
+  gem 'factory_girl_rails', :require => false
   gem 'cucumber-rails'
   gem 'capybara'
   gem 'mongoid-rspec'
