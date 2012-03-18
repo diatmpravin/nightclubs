@@ -20,10 +20,10 @@ class ServicelistingsController < ApplicationController
 	end
 
 	def create
-		@servicelisting = Servicelisting.new(params[:servicelisting])
+		raise @servicelisting = Servicelisting.new(params[:servicelisting]).inspect
 
 		respond_to do |format|
-			if @servicelisting.save!
+			if @servicelisting.save
 				format.html { redirect_to @servicelisting, notice: 'Servicelisting was successfully created.' }
 				format.json { render json: @servicelisting, status: :created, location: @servicelisting }
 			else
