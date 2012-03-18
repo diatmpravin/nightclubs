@@ -4,9 +4,9 @@ class Servicelisting
 	include Mongoid::Timestamps::Updated
 	
 	#FILE UPLOAD CONFIGRATION
-	has_mongoid_attached_file :photo,
-                    :styles => {:thumb => "150x150!"},
-                    :default_url => '/images/servicelisting-noimage.jpg'
+	#has_mongoid_attached_file :photo,
+                    #:styles => {:thumb => "150x150!"},
+                    #:default_url => '/images/servicelisting-noimage.jpg'
   
 	# RELATIONS
 	belongs_to :bar
@@ -21,9 +21,9 @@ class Servicelisting
 	field :noOfGuest, :type => Integer
 	field :status, :type => Integer
 	field :hightestBid, :type => Integer
-	field :photo_file_name, :string # Original filename
-	field :photo_content_type, :string # Mime type
-	field :photo_file_size, :integer # File size in bytes
+	#field :photo_file_name, :string # Original filename
+	#field :photo_content_type, :string # Mime type
+	#field :photo_file_size, :integer # File size in bytes
 	
 	#VALIDATIONS
 	validates_presence_of :title, :message => 'Please provide title to your service'
